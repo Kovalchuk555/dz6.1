@@ -32,14 +32,28 @@ public class Main {
                 System.out.println("Кредит погашен");
 
             }
-            ;
+
+
+            }
             if (payment < 700) {
                 int dolg = wholeprice - payment;
                 System.out.println("Ваш долг составляет:  " + dolg);
-                System.out.println();;
-            } else {
+
+                Scanner in = new Scanner(System.in);
+                System.out.println("Введите сумму ");
+                int p = in.nextInt();
+                System.out.println("Введенная сумма =  "+p);
+                payment=payment+p;
+                System.out.println("На вашем счету =  "+payment);
+                if(payment==700){
+                    System.out.println("Кредит погашен");
+                }
+
+
+
+            } if (payment>700){
                 int count = payment - wholeprice;
                 System.out.println("Кредит погашен ,на счету остаток= " + count);
-            }
+
         }}}
 
